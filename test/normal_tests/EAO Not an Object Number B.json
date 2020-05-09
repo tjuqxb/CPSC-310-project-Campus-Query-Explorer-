@@ -1,0 +1,18 @@
+{
+    "title": "EAO not an object",
+    "query": {
+        "WHERE": {
+            "AND": 1
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_id",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

@@ -1,0 +1,6 @@
+{
+    "title": "wrong number query",
+    "query": 1,
+    "isQueryValid": false,
+    "result": "InsightError"
+}

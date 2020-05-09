@@ -1,0 +1,39 @@
+{
+  "title": "TRANSFORMATION TEST SUM",
+  "query": {
+    "WHERE": {
+      "GT": {
+        "courses_avg": 97
+      }
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_id",
+        "courses_year",
+        "sumYear"
+      ],
+      "ORDER": {
+        "dir": "UP",
+        "keys": [
+          "courses_year",
+          "courses_id"
+        ]
+      }
+    },
+    "TRANSFORMATIONS": {
+      "GROUP": [
+        "courses_id",
+        "courses_year"
+      ],
+      "APPLY": [
+        {
+          "sumYear": {
+            "SUM": "courses_year"
+          }
+        }
+      ]
+    }
+  },
+  "isQueryValid": true,
+  "result":[{"courses_id":"300","courses_year":1900,"sumYear":1900},{"courses_id":"421","courses_year":1900,"sumYear":3800},{"courses_id":"449","courses_year":1900,"sumYear":3800},{"courses_id":"509","courses_year":1900,"sumYear":3800},{"courses_id":"519","courses_year":1900,"sumYear":1900},{"courses_id":"525","courses_year":1900,"sumYear":1900},{"courses_id":"527","courses_year":1900,"sumYear":1900},{"courses_id":"532","courses_year":1900,"sumYear":1900},{"courses_id":"534","courses_year":1900,"sumYear":1900},{"courses_id":"541","courses_year":1900,"sumYear":3800},{"courses_id":"574","courses_year":1900,"sumYear":1900},{"courses_id":"578","courses_year":1900,"sumYear":5700},{"courses_id":"591","courses_year":1900,"sumYear":1900},{"courses_id":"596","courses_year":1900,"sumYear":1900},{"courses_id":"596","courses_year":2007,"sumYear":2007},{"courses_id":"606","courses_year":2007,"sumYear":2007},{"courses_id":"421","courses_year":2009,"sumYear":4018},{"courses_id":"527","courses_year":2009,"sumYear":2009},{"courses_id":"534","courses_year":2009,"sumYear":2009},{"courses_id":"541","courses_year":2009,"sumYear":2009},{"courses_id":"574","courses_year":2009,"sumYear":2009},{"courses_id":"421","courses_year":2010,"sumYear":2010},{"courses_id":"532","courses_year":2010,"sumYear":2010},{"courses_id":"541","courses_year":2010,"sumYear":2010},{"courses_id":"578","courses_year":2010,"sumYear":2010},{"courses_id":"591","courses_year":2010,"sumYear":2010},{"courses_id":"449","courses_year":2011,"sumYear":2011},{"courses_id":"509","courses_year":2011,"sumYear":2011},{"courses_id":"519","courses_year":2011,"sumYear":2011},{"courses_id":"449","courses_year":2012,"sumYear":4024},{"courses_id":"574","courses_year":2012,"sumYear":2012},{"courses_id":"549","courses_year":2013,"sumYear":2013},{"courses_id":"578","courses_year":2013,"sumYear":2013},{"courses_id":"599","courses_year":2013,"sumYear":4026},{"courses_id":"449","courses_year":2014,"sumYear":2014},{"courses_id":"300","courses_year":2015,"sumYear":2015},{"courses_id":"500","courses_year":2015,"sumYear":2015},{"courses_id":"509","courses_year":2015,"sumYear":2015},{"courses_id":"578","courses_year":2015,"sumYear":2015},{"courses_id":"525","courses_year":2016,"sumYear":2016}]
+}

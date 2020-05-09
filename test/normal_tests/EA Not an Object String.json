@@ -1,0 +1,6 @@
+{
+    "title": "wrong string query",
+    "query": "mistake",
+    "isQueryValid": false,
+    "result": "InsightError"
+}

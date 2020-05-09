@@ -1,0 +1,20 @@
+{
+    "title": "EB not a filter wrong key",
+    "query": {
+        "WHERE": {
+            "INVALID": {
+                "courses_avg": 97
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        },
+        "INVALID": "INVALID"
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

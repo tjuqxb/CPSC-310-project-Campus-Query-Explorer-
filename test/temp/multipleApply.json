@@ -1,0 +1,45 @@
+{
+  "title": "TRANSFORMATION TEST AVG",
+  "query": {
+    "WHERE": {
+      "GT": {
+        "courses_avg": 97
+      }
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_id",
+        "courses_year",
+        "coursesAvg",
+        "numCourses"
+      ],
+      "ORDER": {
+        "dir": "UP",
+        "keys": [
+          "courses_year",
+          "courses_id"
+        ]
+      }
+    },
+    "TRANSFORMATIONS": {
+      "GROUP": [
+        "courses_id",
+        "courses_year"
+      ],
+      "APPLY": [
+        {
+          "coursesAvg": {
+            "AVG": "courses_avg"
+          }
+        },
+        {
+          "numCourses": {
+            "COUNT": "courses_avg"
+          }
+        }
+      ]
+    }
+  },
+  "isQueryValid": true,
+  "result":[{"courses_id":"300","courses_year":1900,"coursesAvg":98.98,"numCourses":1},{"courses_id":"421","courses_year":1900,"coursesAvg":97.83,"numCourses":2},{"courses_id":"449","courses_year":1900,"coursesAvg":98.67,"numCourses":2},{"courses_id":"509","courses_year":1900,"coursesAvg":98.46,"numCourses":2},{"courses_id":"519","courses_year":1900,"coursesAvg":98.45,"numCourses":1},{"courses_id":"525","courses_year":1900,"coursesAvg":97.25,"numCourses":1},{"courses_id":"527","courses_year":1900,"coursesAvg":99.78,"numCourses":1},{"courses_id":"532","courses_year":1900,"coursesAvg":97.48,"numCourses":1},{"courses_id":"534","courses_year":1900,"coursesAvg":97.41,"numCourses":1},{"courses_id":"541","courses_year":1900,"coursesAvg":97.92,"numCourses":2},{"courses_id":"574","courses_year":1900,"coursesAvg":97.47,"numCourses":1},{"courses_id":"578","courses_year":1900,"coursesAvg":98.2,"numCourses":3},{"courses_id":"591","courses_year":1900,"coursesAvg":97.33,"numCourses":1},{"courses_id":"596","courses_year":1900,"coursesAvg":97.09,"numCourses":1},{"courses_id":"596","courses_year":2007,"coursesAvg":97.09,"numCourses":1},{"courses_id":"606","courses_year":2007,"coursesAvg":97.67,"numCourses":1},{"courses_id":"421","courses_year":2009,"coursesAvg":98.39,"numCourses":2},{"courses_id":"527","courses_year":2009,"coursesAvg":99.78,"numCourses":1},{"courses_id":"534","courses_year":2009,"coursesAvg":97.78,"numCourses":1},{"courses_id":"541","courses_year":2009,"coursesAvg":98.75,"numCourses":1},{"courses_id":"574","courses_year":2009,"coursesAvg":97.47,"numCourses":1},{"courses_id":"421","courses_year":2010,"coursesAvg":97.29,"numCourses":1},{"courses_id":"532","courses_year":2010,"coursesAvg":97.48,"numCourses":1},{"courses_id":"541","courses_year":2010,"coursesAvg":97.09,"numCourses":1},{"courses_id":"578","courses_year":2010,"coursesAvg":98.58,"numCourses":1},{"courses_id":"591","courses_year":2010,"coursesAvg":97.33,"numCourses":1},{"courses_id":"449","courses_year":2011,"coursesAvg":97.41,"numCourses":1},{"courses_id":"509","courses_year":2011,"coursesAvg":98.71,"numCourses":1},{"courses_id":"519","courses_year":2011,"coursesAvg":98.45,"numCourses":1},{"courses_id":"449","courses_year":2012,"coursesAvg":98.67,"numCourses":2},{"courses_id":"574","courses_year":2012,"coursesAvg":99.19,"numCourses":1},{"courses_id":"549","courses_year":2013,"coursesAvg":97.69,"numCourses":1},{"courses_id":"578","courses_year":2013,"coursesAvg":98.5,"numCourses":1},{"courses_id":"599","courses_year":2013,"coursesAvg":98,"numCourses":1},{"courses_id":"449","courses_year":2014,"coursesAvg":98.8,"numCourses":1},{"courses_id":"300","courses_year":2015,"coursesAvg":98.98,"numCourses":1},{"courses_id":"500","courses_year":2015,"coursesAvg":97.5,"numCourses":1},{"courses_id":"509","courses_year":2015,"coursesAvg":98.21,"numCourses":1},{"courses_id":"578","courses_year":2015,"coursesAvg":97.53,"numCourses":1},{"courses_id":"525","courses_year":2016,"coursesAvg":97.25,"numCourses":1}]
+}
