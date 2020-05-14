@@ -1,63 +1,9 @@
-# CPSC 310 Project Repository
+CPSC-310-project-Campus-Query-Explorer
+======================================
+CPSC 310 project based on Node.js has several stages:<br>
+1 Load raw zip files and parse the data(pure text and HTML format) to a JSON object.<br>
+2 Build a JSON query AST parser and make queries to the database.<br>
+3 Modify parser and query algorithms to handle more complex queries.<br>
+4 Build RESTful web services and create queries from frontend DOM using JavaScript.
 
-This repository contains starter code for the class project.
-Please keep your repository private.
 
-For information about the project, autotest, and the checkpoints, see the [course webpage](https://sites.google.com/site/cpsc31019w2).
-
-## Configuring your environment
-
-To start using this project, you need to get your computer configured so you can build and execute the code.
-To do this, follow these steps; the specifics of each step (especially the first two) will vary based on which operating system your computer has:
-
-1. [Install git](https://git-scm.com/downloads) (v2.9+). After installing you should be able to execute `git --version` on the command line.
-
-1. [Install Node LTS](https://nodejs.org/en/download/) (v12.14.X), which will also install NPM (you should be able to execute `node --version` and `npm --version` on the command line).
-
-1. [Install Yarn](https://yarnpkg.com/en/docs/install) (v1.12+). You should be able to execute `yarn --version` afterwards.
-
-1. Clone your repository by running `git clone REPO_URL` from the command line. You can get the REPO_URL by clicking on the green button on your project repository page on GitHub. Note that due to new department changes you can no longer access private git resources using https and a username and password. You will need to use either [an access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) or [SSH](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account).
-
-## Project commands
-
-Once your environment is configured you need to further prepare the project's tooling and dependencies.
-In the project folder:
-
-1. `yarn install` to download the packages specified in your project's *package.json* to the *node_modules* directory.
-
-1. `yarn build` to compile your project. You must run this command after making changes to your TypeScript files.
-
-1. `yarn test` to run the test suite.
-
-1. `yarn pretty` to prettify your project code.
-
-## Running and testing from an IDE
-
-WebStorm should be automatically configured the first time you open the project (WebStorm is a free download through their students program). For other IDEs and editors, you'll want to set up test and debug tasks and specify that the schema of all files in `test/queries` should follow `test/query.schema.json`.
-
-___
-
-# master
-```
-git checkout <branch-name>
-git checkout development
-```
-
-## To create a new branch and go to it
-git checkout -b <branch-name>
-
-## Set up commit/push to your own branch
-
-```
-git --set-upstream origin <branch-name>
-```
-
-- Pull-requests done on GitHub
-- Merges done on GitHub
-- Branch deletion on GitHub
-
-## If you want to switch to #master or #development or another branch to see/compare code
-
-```
-git checkout <branch-name>
-```
